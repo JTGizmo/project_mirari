@@ -1,4 +1,5 @@
 # Project Mirari
+> The word mirror derives from the French “mirour,” from the Latin “mirari” — to admire.
 ###### Little smart mirror project that I am developing in my spare time.
 
 The goal of this project is to learn Python whilst hopefully also assembling a fully functional smart mirror that is integrated with some of my in house gadgets/features, this file will be updated periodically as I will be progressing with my project. I will be using Raspberry Pi 4B 4GB as the main device to power/enable all the features hopefully.
