@@ -1,29 +1,42 @@
 import os
-
 import requests
+
 from dotenv import load_dotenv
-
-# create .env file to load the private API keys
-load_dotenv()
-weather_api_key = os.getenv("weather_api_key")
+from datetime import datetime
 
 
-def get_weather_request(city_name):
-    api_key = weather_api_key
-    # using requests to build the URL
-    api = {"q": city_name, "units": "metric", "appid": api_key}
-    response = requests.get("https://api.openweathermap.org/data/2.5/weather", params=api)
-    return response
+class Weather:
+    def __init__(self, city_name):
+        # create .env file to load the private API keys using python_dotenv package
+        load_dotenv()
+        self.city_name = city_name
+        self.api_key = os.getenv("weather_api_key")
+        self.api_response = self.get_weather_request()
+        self.weather_project = self.api_response.json()
+        self.weather = self.weather_project["weather"]
 
+        self.temperature = self.weather_project["main"]
+        self.current_temp = self.temperature["temp"]
+        self.feels_like = self.temperature["feels_like"]
+        self.humidity = self.temperature["humidity"]
 
-def print_weather_info(city_name, weather, celsius, feels_like, humidity, sun_rise, sun_set):
-    print(f"The weather in {city_name} is with {weather[0]['description']}\n"
-          f"Current temperature: {int(celsius)}°C\n"
-          f"And it feels like {int(feels_like)}°C\n"
-          f"Current humidity is at {humidity}%\n"
-          f"Sunrise today was at {sun_rise:%H:%M} AM\n"
-          f"The sun will set tonight at {sun_set:%H:%M} PM")
+        # TODO: Check whether we need to provide time in local timezone
+        # TODO: For weather application will need to design setting default location
+        # sunrise and sunset figures
+        self.sun = self.weather_project["sys"]
+        self.sun_rise = datetime.fromtimestamp(self.sun["sunrise"])
+        self.sun_set = datetime.fromtimestamp(self.sun["sunset"])
 
+    def get_weather_request(self):
+        # using requests to build the URL
+        api = {"q": self.city_name, "units": "metric", "appid": self.api_key}
+        response = requests.get("https://api.openweathermap.org/data/2.5/weather", params=api)
+        return response
 
-
-
+    def print_weather_info(self):
+        print(f"The weather in {self.city_name} is with {self.weather[0]['description']}\n"
+              f"Current temperature: {int(self.current_temp)}°C\n"
+              f"And it feels like {int(self.feels_like)}°C\n"
+              f"Current humidity is at {self.humidity}%\n"
+              f"Sunrise today was at {self.sun_rise:%H:%M} AM\n"
+              f"The sun will set tonight at {self.sun_set:%H:%M} PM")
