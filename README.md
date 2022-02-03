@@ -21,6 +21,8 @@ Full list of desired features, however it is yet to be determined whether all th
     * Tailored features on the mirror
 6. Weather information
     * Have a set default location but allow also user to change to view weather in other locations
+7. Voice recognition
+   * Basic voice command recognitions
 
 
 ## TO DO
