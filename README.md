@@ -35,6 +35,7 @@ At this point this seems like an endless list, but you got to start somewhere. T
     * Motion Detection - Status: Unknown
     * Facial Recognition - Status: Unknown
     * Weather information - Status: Possible
+    * Voice recognition - Status: Unknown
 
 ## Ideas
 Will populate these as I progress
