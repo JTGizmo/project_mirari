@@ -22,7 +22,7 @@ Full list of desired features, however it is yet to be determined whether all th
 6. Weather information
     * Have a set default location but allow also user to change to view weather in other locations
 7. Voice recognition
-   * Basic voice command recognitions
+    * Basic voice command recognitions
 
 
 ## TO DO
@@ -36,6 +36,9 @@ At this point this seems like an endless list, but you got to start somewhere. T
     * Facial Recognition - Status: Unknown
     * Weather information - Status: Possible
     * Voice recognition - Status: Unknown
+    
+ 2. Outstanding tasks
+    * Hide private API key using .env file: Completed
 
 ## Ideas
 Will populate these as I progress
