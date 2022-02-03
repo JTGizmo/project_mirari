@@ -34,6 +34,9 @@ At this point this seems like an endless list, but you got to start somewhere. T
     * Facial Recognition - Status: Unknown
     * Weather information - Status: Possible
 
+## Ideas
+Will populate these as I progress
+
 ## Version History
 
 
