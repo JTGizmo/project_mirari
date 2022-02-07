@@ -1,18 +1,10 @@
-import os
-import requests
-
-from dotenv import load_dotenv
+from weather_api import WeatherApi
 from datetime import datetime
 
 
 class Weather:
-    def __init__(self, city_name):
-        # create .env file to load the private API keys using python_dotenv package
-        load_dotenv()
-        self.city_name = city_name
-        self.api_key = os.getenv("weather_api_key")
-        self.api_response = self.get_weather_request()
-        self.weather_project = self.api_response.json()
+    def __init__(self):
+        self.weather_project = WeatherApi().get_weather_request()
         self.weather = self.weather_project["weather"]
 
         self.temperature = self.weather_project["main"]
@@ -27,11 +19,11 @@ class Weather:
         self.sun_rise = datetime.fromtimestamp(self.sun["sunrise"])
         self.sun_set = datetime.fromtimestamp(self.sun["sunset"])
 
-    def get_weather_request(self):
+        """def get_weather_request(self):
         # using requests to build the URL
         api = {"q": self.city_name, "units": "metric", "appid": self.api_key}
         response = requests.get("https://api.openweathermap.org/data/2.5/weather", params=api)
-        return response
+        return response"""
 
     def print_weather_info(self):
         print(f"The weather in {self.city_name} is with {self.weather[0]['description']}\n"
