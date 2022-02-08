@@ -1,10 +1,10 @@
-from weather import Weather
+from weatheroutput import WeatherOutput
 
 
 def main():
-    input_city_name = input("Enter City name:")
-    weather_output = Weather(input_city_name)
-    weather_output.print_weather_info()
+    WeatherOutput().print_weather_info()
+    # TODO: Create default city on initial load of the program, that then can be changed.
+
 
 if __name__ == "__main__":
     main()
