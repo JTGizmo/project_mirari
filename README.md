@@ -45,7 +45,8 @@ At this point this seems like an endless list, but you got to start somewhere. T
 v1.0 weather module
 
 ## Ideas
-Will populate these as I progress
+* Add sensors to measure in-house temperature
+* Allow changing in-home temperature via touch screen
 
 ## Version History
 
