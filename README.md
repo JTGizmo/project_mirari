@@ -40,6 +40,9 @@ At this point this seems like an endless list, but you got to start somewhere. T
     
  2. Outstanding tasks
     * Hide private API key using .env file: Completed
+## COMPLETED
+
+v1.0 weather module
 
 ## Ideas
 Will populate these as I progress
