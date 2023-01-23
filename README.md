@@ -30,9 +30,9 @@ Full list of desired features, however it is yet to be determined whether all th
 At this point this seems like an endless list, but you got to start somewhere. This will be heavily edited and changed as this progresses.
 
 1. Investigate whether features are possible
-    * Time and Date display - Status: Unknown
+    * Time and Date display - Status: Possible
     * Camera feed - Status: Unknown
-    * Welcome Message - Status: Unknown
+    * Welcome Message - Status: Possible
     * Motion Detection - Status: Unknown
     * Facial Recognition - Status: Unknown
     * Weather information - Status: Possible
@@ -40,9 +40,13 @@ At this point this seems like an endless list, but you got to start somewhere. T
     
  2. Outstanding tasks
     * Hide private API key using .env file: Completed
+## COMPLETED
+
+v1.0 weather module
 
 ## Ideas
-Will populate these as I progress
+* Add sensors to measure in-house temperature
+* Allow changing in-home temperature via touch screen
 
 ## Version History
 
