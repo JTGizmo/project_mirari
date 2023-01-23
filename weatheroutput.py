@@ -11,3 +11,4 @@ class WeatherOutput(Weather, WeatherApi):
               f"Current humidity is at {self.humidity}%\n"
               f"Sunrise today was at {self.sun_rise:%H:%M} AM\n"
               f"The sun will set tonight at {self.sun_set:%H:%M} PM")
+

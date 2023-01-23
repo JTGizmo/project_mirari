@@ -17,3 +17,4 @@ class WeatherApi:
         api = {"q": self.city_name, "units": "metric", "appid": self.api_key}
         response = requests.get(self.api_url, params=api)
         return response.json()
+
