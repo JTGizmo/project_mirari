@@ -4,7 +4,7 @@ from weather_api import WeatherApi
 
 class WeatherOutput(Weather, WeatherApi):
     def print_weather_info(self):
-        """Provides the weather output text"""
+        # Provides the weather output text
         print(f"The weather in {WeatherApi().city_name} is with {self.weather[0]['description']}\n"
               f"Current temperature: {int(self.current_temp)}°C\n"
               f"And it feels like {int(self.feels_like)}°C\n"
